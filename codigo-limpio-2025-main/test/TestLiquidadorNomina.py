@@ -93,7 +93,7 @@ class TestLiquidadorNomina(unittest.TestCase):
         bonos_extra = 0
         deduccion_adicional = 0
 
-        with self.assertRaises (Calculo_Total.ErrorSalarioN):
+        with self.assertRaises (ErrorSalarioN):
 
             result = calculo_total(salario_base, horas_diurnas, horas_nocturnas, bonos_extra, deduccion_adicional)
 
@@ -105,7 +105,7 @@ class TestLiquidadorNomina(unittest.TestCase):
         bonos_extra = 300000
         deduccion_adicional = 1400000
                     
-        with self.assertRaises (Calculo_Total.ErrorDeduccionesM):
+        with self.assertRaises (ErrorDeduccionesM):
 
              result = calculo_total(salario_base, horas_diurnas, horas_nocturnas, bonos_extra, deduccion_adicional)
 
@@ -119,7 +119,7 @@ class TestLiquidadorNomina(unittest.TestCase):
         bonos_extra = 0
         deduccion_adicional = 0
                     
-        with self.assertRaises (Calculo_Total.ErrorHorasExtra):
+        with self.assertRaises (ErrorHorasExtra):
             
             result = calculo_total(salario_base, horas_diurnas, horas_nocturnas, bonos_extra, deduccion_adicional)
 
